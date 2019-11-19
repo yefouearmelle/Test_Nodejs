@@ -6,8 +6,19 @@ Livello base
 
 2-  Aprire la cartella con un  IDE di svilupo
 
-3-  dal terminal >>> node app.js
-    per generare i file json 
+
+3-  Dal terminal 
+    >>> node app.js
+                     se ci sono errori?
+                     
+    >>> npm install  
+     per installare il file di configurazione
+     poi 
+    >>> npm install "package" --save
+    
+    se manca un package
+  
+    per generare i file json "Photos1.json" e "Albums.json"
     
 4- Aprire il file index.html con Browser
 
