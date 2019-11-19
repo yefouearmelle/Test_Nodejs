@@ -24,3 +24,9 @@ Livello base
 6- Aprire il file index.html con Browser
 
 7- Fare un click su Album1 e poi su un'immagine
+
+
+                !!!!!!!!!!   TEST FATTO COM MICROSOFT EDGE     !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
