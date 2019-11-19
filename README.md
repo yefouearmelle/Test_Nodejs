@@ -26,7 +26,7 @@ Livello base
 7- Fare un click su Album1 e poi su un'immagine
 
 
-                !!!!!!!!!!   TEST FATTO COM MICROSOFT EDGE     !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                !!!!!!!!!!   TEST FATTO CON MICROSOFT EDGE     !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
