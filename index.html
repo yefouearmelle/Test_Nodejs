@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+
+ <script>
+
+  var status=document.getElementById("status");
+  $(document).ready(function(){
+
+   $("#btn").click(function(){
+
+    $.getJSON("photos1.json", function(data, status){
+
+        data.forEach(el => {
+
+          var img = document.createElement('img');
+          img.src = el.thumbnailUrl;
+          document.body.appendChild(img); 
+          img.addEventListener('click', function() { launchWindow(this) }, false);
+       
+        function launchWindow(img) {
+          img.src = el.url;
+          imageWindow = window.open();
+          imageWindow.document.write("<html><body><img src=" + img.src +"alt='imagine originale'></body></html>");
+
+          if(window.focus) {
+            imageWindow.focus;
+          }
+
+        }
+
+      });
+
+    });
+   });
+  });
+  
+  </script>
+
+</head>
+
+<body>
+  <button class="btn btn-primary" id="btn">Album1</button>
+  <div id="status"></div>
+  <br />
+
+               
+</body>
+
+</html>
