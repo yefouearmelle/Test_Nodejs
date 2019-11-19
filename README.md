@@ -9,17 +9,18 @@ Livello base
 
 3-  Dal terminal 
     >>> node app.js
-                     se ci sono errori?
+    
+ 4- Se ci sono errori perche manca Nodejs ?
                      
     >>> npm install  
      per installare il file di configurazione
      poi 
     >>> npm install "package" --save
     
-    se manca un package
+5- Se manca un package
   
     per generare i file json "Photos1.json" e "Albums.json"
     
-4- Aprire il file index.html con Browser
+6- Aprire il file index.html con Browser
 
-5- Fare un click su Album1 e poi su un'immagine
+7- Fare un click su Album1 e poi su un'immagine
