@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script   src="https://code.jquery.com/jquery-1.12.1.js"   integrity="sha256-VuhDpmsr9xiKwvTIHfYWCIQ84US9WqZsLfR4P7qF6O8="   crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script   src="https://code.jquery.com/jquery-1.12.1.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 
 <head>
   <meta charset="UTF-8">
@@ -20,6 +20,7 @@
 
           var img = document.createElement('img');
           img.src = el.thumbnailUrl;
+          img.title=el.title;
           document.body.appendChild(img); 
           img.addEventListener('click', function() { launchWindow(this) }, false);
        
@@ -28,9 +29,9 @@
           imageWindow = window.open();
           imageWindow.document.write("<html><body><img src=" + img.src +"alt='imagine originale'></body></html>");
 
-          if(window.focus) {
+           if(window.focus) {
             imageWindow.focus;
-          }
+           }
 
         }
 
@@ -45,7 +46,7 @@
 </head>
 
 <body>
-  <button  align='center' class="btn btn-primary" id="btn">Album1</button>
+  <button  class="btn btn-primary" id="btn">Album1</button>
   <div id="status"></div>
   <br />
 

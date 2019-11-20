@@ -1,5 +1,5 @@
-var fetch = require("node-fetch")
-var fs = require('fs')
+var fetch = require("node-fetch");
+var fs = require('fs');
 var http = require('http');
 var connect = require('connect');
 var serveStatic = require('serve-static');
