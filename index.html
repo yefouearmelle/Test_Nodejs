@@ -44,7 +44,7 @@
           img.src = el.thumbnailUrl;
           img.title=el.title;
           document.body.appendChild(img); 
-          img.addEventListener('click', function() { launchWindow(this) }, false);
+          img.addEventListener('click',  function() { launchWindow(this)  }, false);
        
         function launchWindow(img) {
           img.src = el.url;
@@ -61,6 +61,7 @@
     });
    });
 
+
      $("#btn2").click(function(){
 
         $.getJSON("photos2.json", function(data, status){
@@ -71,7 +72,7 @@
               img.src = el.thumbnailUrl;
               img.title=el.title;
               document.body.appendChild(img); 
-              img.addEventListener('click', function() { launchWindow(this) }, false);
+              img.addEventListener('click', function() { launchWindow(this) }, true);
           
             function launchWindow(img) {
               img.src = el.url;
@@ -87,6 +88,7 @@
 
         }); 
    });
+
 
     $("#btn3").click(function(){
 
@@ -124,14 +126,15 @@
 
 <body>
 
-<br>
-  <button  class="btn btn-primary" id="btn">Album1</button>
-  
-  <button  class="btn second" id="btn2">Album2</button>
-  
-  <button  class="btn third" id="btn3">Album3</button>
-  
-  <br />
+
+      <br>
+      <button  class="btn btn-primary" id="btn">Album1</button>
+      
+      <button  class="btn second" id="btn2">Album2</button>
+      
+      <button  class="btn third" id="btn3">Album3</button>
+      
+      <br />
 
                
 </body>
