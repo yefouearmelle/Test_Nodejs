@@ -26,12 +26,12 @@ var photos = {}
   )
 //Extraction dei riferimenti relativi alle foto dell'album con albumId=1 e savataggio su un file json photos1.json
 
-  fetch('http://jsonplaceholder.typicode.com/albums/1/photos?albumId=1')
+  fetch('http://jsonplaceholder.typicode.com/albums/1/photos?albumId=3')
   .then(res => {
     return res.json();})
   .then(data => { 
     photos=data
-    fs.writeFileSync('photos1.json', JSON.stringify(photos, null, 2)); 
+    fs.writeFileSync('photos3.json', JSON.stringify(photos, null, 2)); 
   }
   )
 

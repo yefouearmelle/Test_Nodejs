@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script   src="https://code.jquery.com/jquery-1.12.1.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 
 <head>
-  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 56px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #eee;}
+
+.second{color: red;}
+.third {color: dodgerblue;}
+
+</style>
 
  <script>
 
   var status=document.getElementById("status");
+
   $(document).ready(function(){
 
    $("#btn").click(function(){
@@ -32,13 +54,68 @@
            if(window.focus) {
             imageWindow.focus;
            }
-
         }
 
       });
 
     });
    });
+
+     $("#btn2").click(function(){
+
+        $.getJSON("photos2.json", function(data, status){
+
+            data.forEach(el => {
+
+              var img = document.createElement('img');
+              img.src = el.thumbnailUrl;
+              img.title=el.title;
+              document.body.appendChild(img); 
+              img.addEventListener('click', function() { launchWindow(this) }, false);
+          
+            function launchWindow(img) {
+              img.src = el.url;
+              imageWindow = window.open();
+              imageWindow.document.write("<html><body><img src=" + img.src +"alt='imagine originale'></body></html>");
+
+              if(window.focus) {
+                imageWindow.focus;
+              }
+            }
+
+          });
+
+        }); 
+   });
+
+    $("#btn3").click(function(){
+
+        $.getJSON("photos3.json", function(data, status){
+
+            data.forEach(el => {
+
+              var img = document.createElement('img');
+              img.src = el.thumbnailUrl;
+              img.title=el.title;
+              document.body.appendChild(img); 
+              img.addEventListener('click', function() { launchWindow(this) }, false);
+          
+            function launchWindow(img) {
+              img.src = el.url;
+              imageWindow = window.open();
+              imageWindow.document.write("<html><body><img src=" + img.src +"alt='imagine originale'></body></html>");
+
+              if(window.focus) {
+                imageWindow.focus;
+              }
+            }
+
+          });
+
+        }); 
+   });
+
+
   });
   
   </script>
@@ -46,8 +123,14 @@
 </head>
 
 <body>
+
+<br>
   <button  class="btn btn-primary" id="btn">Album1</button>
-  <div id="status"></div>
+  
+  <button  class="btn second" id="btn2">Album2</button>
+  
+  <button  class="btn third" id="btn3">Album3</button>
+  
   <br />
 
                
