@@ -1,7 +1,18 @@
 var fetch = require("node-fetch")
 var fs = require('fs')
+var http = require('http');
+var connect = require('connect');
+var serveStatic = require('serve-static');
+
+var hostname = '127.0.0.1';
+var port = 8080;
+connect().use(serveStatic(__dirname)).listen(port, function(){
+    console.log('Server running on 8080...');
+});
+
 var albums = {}
 var photos = {}
+
 
 //Extraction dei riferimenti degli album e savataggio su un file json "albums.json"
 

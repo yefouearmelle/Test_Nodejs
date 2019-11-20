@@ -15,6 +15,8 @@ Livello base
     >>> npm install  
      per installare il file di configurazione
      poi 
+     npm install connect-static
+
     >>> npm install "package" --save
     
 5- Se manca un package
