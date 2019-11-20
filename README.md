@@ -16,6 +16,7 @@ Livello base
      per installare il file di configurazione
      poi 
      npm install connect-static
+     npm install require --save
 
     >>> npm install "package" --save
     
@@ -23,12 +24,11 @@ Livello base
   
     per generare i file json "Photos1.json" e "Albums.json"
     
-6- Aprire il file index.html con Browser
+6- Aprire il progetto con http://localhost:8080/ con  qualsiasi Browser
 
 7- Fare un click su Album1 e poi su un'immagine
 
 
-                !!!!!!!!!!   TEST FATTO CON MICROSOFT EDGE     !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
