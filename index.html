@@ -26,6 +26,14 @@
 .second{color: red;}
 .third {color: dodgerblue;}
 
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 </style>
 
  <script>
@@ -45,12 +53,12 @@
           img.title=el.title;
           document.body.appendChild(img); 
           img.addEventListener('click',  function() { launchWindow(this)  }, false);
-       
+
+         
         function launchWindow(img) {
           img.src = el.url;
           imageWindow = window.open();
-          imageWindow.document.write("<html><body><img src=" + img.src +"alt='imagine originale'></body></html>");
-
+          imageWindow.document.write("<html><body><img src=" + img.src +"alt='imagine originale'></body></html>"); 
            if(window.focus) {
             imageWindow.focus;
            }
@@ -60,6 +68,7 @@
 
     });
    });
+       
 
 
      $("#btn2").click(function(){
@@ -126,7 +135,7 @@
 
 <body>
 
-
+<div class="row">
       <br>
       <button  class="btn btn-primary" id="btn">Album1</button>
       
@@ -136,7 +145,9 @@
       
       <br />
 
-               
+
+</div>
+
 </body>
 
 </html>
