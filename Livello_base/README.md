@@ -26,7 +26,7 @@ Livello base
     
 6- Aprire il progetto con http://localhost:8080/ con  qualsiasi Browser
 
-7- Fare un click su Album1 e poi su un'immagine
+7- Fare un click su un albums photos da visualizzare Album1 or Album2 or Album3 e poi su un'immagine
 
 
 
