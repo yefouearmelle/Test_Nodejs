@@ -113,12 +113,10 @@
           
             function launchWindow(img) {
               img.src = el.url;
-              imageWindow = window.open();
-              imageWindow.document.write("<html><body><img src=" + img.src +"alt='imagine originale'></body></html>");
-
-              if(window.focus) {
-                imageWindow.focus;
-              }
+              img.title=el.title;
+              imageWindow.document.open();
+              imagewindow.document.write("<html><body><img src=" + img.src + "alt='imagine originale'></body></html>");
+              imageWindow.document.close();
             }
 
           });
@@ -137,11 +135,11 @@
 
 <div class="row">
       <br>
-      <button  class="btn btn-primary" id="btn">Album1</button>
+      <button  class="btn btn-primary" id="btn" onclick="launchWindow(img)">Album1</button>
       
-      <button  class="btn second" id="btn2">Album2</button>
+      <button  class="btn second" id="btn2" onclick="launchWindow(img)">Album2</button>
       
-      <button  class="btn third" id="btn3">Album3</button>
+      <button  class="btn third" id="btn3" onclick="launchWindow(img)">Album3</button>
       
       <br />
 
