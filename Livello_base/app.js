@@ -4,7 +4,6 @@ var http = require('http');
 var connect = require('connect');
 var serveStatic = require('serve-static');
 
-var hostname = '127.0.0.1';
 var port = 8080;
 connect().use(serveStatic(__dirname)).listen(port, function(){
     console.log('Server running on 8080...');
@@ -12,16 +11,17 @@ connect().use(serveStatic(__dirname)).listen(port, function(){
 
 var albums = {}
 var photos = {}
+var Users = {}
 
 
 //Extraction dei riferimenti degli album e savataggio su un file json "albums.json"
 
-  fetch('http://jsonplaceholder.typicode.com/albums')
+  fetch('http://jsonplaceholder.typicode.com/albums/users')
   .then(res => {
     return res.json();})
   .then(data => { 
     albums=data
-    fs.writeFileSync('albums.json', JSON.stringify(albums, null, 2));
+    fs.writeFileSync('Userss.json', JSON.stringify(Users, null, 2));
   }
   )
 //Extraction dei riferimenti relativi alle foto dell'album con albumId=1 e savataggio su un file json photos1.json
