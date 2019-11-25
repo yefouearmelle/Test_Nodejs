@@ -13,7 +13,7 @@ exports.list_all_users = function(req, res) {
 };
 
 exports.create_a_user = function(req, res) {
- var new_user = new Task(req.body);
+ var new_user = new user(req.body);
  new_user.save(function(err, user) {
    if (err)
      res.send(err);
