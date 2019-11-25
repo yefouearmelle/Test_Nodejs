@@ -52,17 +52,17 @@
           img.src = el.thumbnailUrl;
           img.title=el.title;
           document.body.appendChild(img); 
-          img.addEventListener('click',  function() { launchWindow(this)  }, false);
+          img.addEventListener('click',  function() { launchWindow(this) }, false);
 
          
         function launchWindow(img) {
           img.src = el.url;
           img.title=el.title;
-          imageWindow = window.close();
+          imageWindow = window.open();
           imageWindow.document.write("<html><body><img src=" + img.src +"alt='imagine originale'></body></html>"); 
-           if(window.focus) {
-            imageWindow.focus;
-           }
+            if(window.focus) {
+             imageWindow.focus;
+            }
         }
 
       });
@@ -87,8 +87,11 @@
             function launchWindow(img) {
               img.src = el.url;
               img.title=el.title;
-              imageWindow = window.close();
+              imageWindow = window.open();
               imageWindow.document.write("<html><body><img src=" + img.src +"alt='imagine originale'></body></html>");
+              if(window.focus) {
+                imageWindow.focus;
+                }
 
             }
 
@@ -113,8 +116,12 @@
               function launchWindow(img) {
               img.src = el.url;
               img.title=el.title;
-              imageWindow = window.close();
+              imageWindow = window.open();
               imageWindow.document.write("<html><body><img src=" + img.src +"alt='imagine originale'></body></html>");
+
+              if(window.focus) {
+                imageWindow.focus;
+                }
               }
 
           });
@@ -140,8 +147,6 @@
       
       <button  class="btn third" id="btn3" >Album3</button>
       
-      
-
 
 </div>
 
