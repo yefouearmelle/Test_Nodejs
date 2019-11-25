@@ -24,9 +24,11 @@ Livello base
   
     per generare i file json "Photos1.json" e "Albums.json"
     
-6- Aprire il progetto con http://localhost:8080/ con  qualsiasi Browser
+6- Aprire il progetto con http://localhost:8080/ con  qualsiasi Browser.
 
-7- Fare un click su un albums photos da visualizzare Album1 or Album2 or Album3 e poi su un'immagine
+7- Fare un click su un albums photos da visualizzare Album1 or Album2 or Album3 e poi su un'immagine che viene ingrandita e si apre anche su un'altra pargina.
+
+Dopo aver aperto un album, bisognerebbe aggiornare il browser prima di aprire un altro.
 
 
 
